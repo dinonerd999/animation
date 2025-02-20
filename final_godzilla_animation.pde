@@ -6,7 +6,7 @@ int timerX;
 int spin;
 int timerX1;
 int timerY1;
-
+//setting up
 void setup() {
  x=250;
  y=125;
@@ -16,25 +16,25 @@ void setup() {
   size(800, 500);
   noStroke();
 }
-
+//drawing
 void draw() {
   background(79, 178, 191);
 
   
   fill(252, 107, 236);
-  
+  //spike things
   quad(x, y, x-100, y-50, x-110, y-30, x-50, y+200);
   quad(x-50, y+200, x-150, y, x-200, y+50, x-250, y+200);
   
   fill(68, 81, 82);
-
+// body
   quad(-200, 400, 100, 700, x+50, y+150, x, y);
   rect(x, y, 180, 100);
-  
+  //eye
   fill(252, 107, 236);
   ellipse(x+60, y+50, 30, 15);
   
-  
+  //rotating jaw
   if (spin>35) {
     spin=35;
     
@@ -72,7 +72,7 @@ void draw() {
     timerX=-1;
   }
   
-  
+  //godzilla moving
  if (y==175) {
   timerY=timerY+1; 
  }
